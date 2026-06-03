@@ -1,362 +1,128 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vivant — Pour la Biodiversité</title>
+<title>BioFriendly — University Association for Biodiversity</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/accueil.css">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
+<nav>
+  <a href="index.html" class="logo">
+    <img src="assets/images/logo-removebg.png" alt="BioFriendly icon">
+    Bio<span>Friendly</span>
+  </a>
+  <ul>
+    <li><a href="mission.html">Mission</a></li>
+    <li><a href="threats.html">Issues</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="donation.html" class="nav-donate">Donate</a></li>
+  </ul>
+</nav>
 
-<div class="success-overlay" id="successOverlay">
-  <div class="big-icon">
-    <img src="assets/images/logo.png" alt="logo">
-  </div>
-  <h2>Merci pour votre geste !</h2>
-  <p>Votre don contribue à protéger la vie sur Terre.</p>
-  <p style="opacity:0.5;font-size:0.9rem">Un reçu fiscal vous sera envoyé par email.</p>
-  <button onclick="document.getElementById('successOverlay').classList.remove('show')">Retour au site</button>
-</div>
-
-
-<section id="hero">
+<!-- HERO -->
+<section id="home-hero">
   <canvas id="particles"></canvas>
-
-  <!-- SVG leaves background -->
   <div class="leaves-bg" id="leavesBg"></div>
 
-  <nav>
-    <div class="logo">
-      <img src="assets/images/logo-removebg.png" alt="Vivant logo" class="logo-img">
-      <span class="logo-text">Bio<span>Friendly</span></span>
-    </div>
-    <ul>
-      <li><a href="#mission">Mission</a></li>
-      <li><a href="#menaces">Enjeux</a></li>
-      <li><a href="#donation">Give</a></li>
-      <li><a href="#donation">who are we</a></li>
-    </ul>
-  </nav>
-
   <div class="hero-content">
-    <p class="eyebrow">Fondation pour la Biodiversité</p>
-    <h1>La vie est <em>fragile.</em> Agissons.</h1>
-    <p class="hero-sub">Un million d'espèces menacées. Des écosystèmes qui s'effondrent. Votre don, aussi petit soit-il, change la donne.</p>
-    <a href="#donation" class="btn-primary">Faire un don maintenant</a>
+    <p class="eyebrow">University Association for Biodiversity</p>
+    <h1>Life is <em>fragile.</em><br>Let's act.</h1>
+    <p class="hero-sub">One million species threatened. Ecosystems collapsing. We are five students who believe that science, awareness, and action can change the course.</p>
+    <div class="hero-ctas">
+      <a href="donation.html" class="btn-primary">Donate now</a>
+      <a href="mission.html" class="btn-secondary">Our mission →</a>
+    </div>
   </div>
 
   <div class="hero-stats">
-    <div class="stat">
-      <span class="stat-num" id="counter1">0</span>
-      <span class="stat-label">espèces menacées</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num" id="counter2">0%</span>
-      <span class="stat-label">de la faune mondiale perdue depuis 1970</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num" id="counter3">0</span>
-      <span class="stat-label">ha de forêt détruits par heure</span>
-    </div>
+    <div class="stat"><span class="stat-num" id="counter1">0</span><span class="stat-label">threatened species</span></div>
+    <div class="stat"><span class="stat-num" id="counter2">0%</span><span class="stat-label">of global wildlife lost since 1970</span></div>
+    <div class="stat"><span class="stat-num" id="counter3">0</span><span class="stat-label">hectares of forest destroyed per hour</span></div>
   </div>
 
-  <div class="scroll-hint">
-    <div class="scroll-line"></div>
-    <span>Défiler</span>
-  </div>
+  <div class="scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
 </section>
 
-<!-- ─── MISSION ─── -->
-<section id="mission">
-  <div class="mission-visual">
-    <div class="circle-anim">
-      <div class="ring"></div>
-      <div class="ring"></div>
-      <div class="ring"></div>
-      <span class="earth-icon">🌍</span>
-    </div>
-  </div>
-  <div class="mission-text">
-    <p class="section-tag reveal">Notre raison d'être</p>
-    <h2 class="reveal reveal-delay-1">Protéger ce qui<br>nous fait vivre</h2>
-    <p class="body-text reveal reveal-delay-2">
-      La biodiversité n'est pas seulement une question d'esthétique ou de sentimentalisme. Elle est le tissu même de notre survie. Les forêts purifient notre air, les océans régulent notre climat, les insectes pollinisent nos cultures.
-    </p>
-    <p class="body-text reveal reveal-delay-2">
-      Chaque don versé à <strong>Vivant</strong> finance directement des projets de terrain : reforestation, protection des habitats marins, programmes éducatifs pour les communautés locales et soutien aux scientifiques qui documentent le vivant.
-    </p>
-  </div>
-</section>
+<!-- FEATURE GRID -->
+<div class="home-features">
+  <a href="mission.html" class="feat">
+    <div class="feat-icon">🌍</div>
+    <h3>Our Mission</h3>
+    <p>Protecting the fabric of life on Earth — forests, oceans, and every species that makes our world breathe.</p>
+    <div class="feat-arrow">Discover →</div>
+  </a>
+  <a href="threats.html" class="feat">
+    <div class="feat-icon">⚠️</div>
+    <h3>Key Issues</h3>
+    <p>Habitat destruction, climate change, pollution. Understand the threats that push thousands of species to extinction.</p>
+    <div class="feat-arrow">Learn more →</div>
+  </a>
+  <a href="team.html" class="feat">
+    <div class="feat-icon">🤝</div>
+    <h3>Our Team</h3>
+    <p>Five university students united by a shared passion for biodiversity and a drive to make a difference.</p>
+    <div class="feat-arrow">Meet us →</div>
+  </a>
+  <a href="donation.html" class="feat">
+    <div class="feat-icon">💚</div>
+    <h3>Donate</h3>
+    <p>Every euro goes directly to field projects — tree planting, reef protection, and scientific research.</p>
+    <div class="feat-arrow">Give now →</div>
+  </a>
+</div>
 
-<!-- ─── PROGRESS BAR ─── -->
+<!-- PROGRESS STRIP -->
 <div class="progress-section">
-  <h2 class="reveal">Notre objectif 2025 : 150 000 €</h2>
-  <div class="progress-bar-wrap">
-    <div class="progress-fill"></div>
-  </div>
+  <h2 class="reveal">Our 2025 goal: €150,000</h2>
+  <div class="progress-bar-wrap"><div class="progress-fill"></div></div>
   <div class="progress-labels">
-    <span><strong style="color:var(--water)">100 500 €</strong> récoltés</span>
+    <span><strong style="color:var(--water)">€100,500</strong> raised</span>
     <span>67%</span>
-    <span>Objectif : 150 000 €</span>
+    <span>Goal: €150,000</span>
   </div>
 </div>
 
-<!-- ─── MENACES ─── -->
-<section id="menaces">
-  <h2 class="reveal">Les menaces qui pèsent sur le vivant</h2>
-  <div class="cards">
-    <div class="card reveal reveal-delay-1">
-      <div class="card-icon">🔥</div>
-      <h3>Destruction des habitats</h3>
-      <p>La déforestation, l'urbanisation et l'agriculture intensive détruisent les milieux naturels à une vitesse sans précédent. Les espèces perdent leurs refuges.</p>
-    </div>
-    <div class="card reveal reveal-delay-2">
-      <div class="card-icon">🌡️</div>
-      <h3>Changement climatique</h3>
-      <p>La hausse des températures modifie les rythmes saisonniers, déplace les espèces et détruit les récifs coralliens — refuges de 25% des espèces marines.</p>
-    </div>
-    <div class="card reveal reveal-delay-3">
-      <div class="card-icon">☠️</div>
-      <h3>Pollution & surexploitation</h3>
-      <p>Pesticides, plastiques, braconnage : l'activité humaine pousse des milliers d'espèces vers l'extinction chaque année, bien avant qu'on les ait découvertes.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ─── DONATION ─── -->
-<section id="donation">
-  <div class="donation-intro">
-    <p class="section-tag reveal">Passer à l'action</p>
-    <h2 class="reveal reveal-delay-1">Chaque euro compte.</h2>
-    <p class="body-text reveal reveal-delay-2">
-      Votre générosité est transformée en actions concrètes. Vivant collabore avec des ONG locales et des scientifiques de terrain pour maximiser l'impact de chaque don.
-    </p>
-    <div class="impact-list reveal reveal-delay-3">
-      <div class="impact-item">
-        <div class="impact-amount">10 €</div>
-        <div class="impact-desc">= 5 arbres plantés en zone de déforestation critique</div>
-      </div>
-      <div class="impact-item">
-        <div class="impact-amount">30 €</div>
-        <div class="impact-desc">= Protection d'1 m² de récif corallien pendant 1 an</div>
-      </div>
-      <div class="impact-item">
-        <div class="impact-amount">50 €</div>
-        <div class="impact-desc">= Financement d'une heure de terrain pour un chercheur</div>
-      </div>
-      <div class="impact-item">
-        <div class="impact-amount">100 €</div>
-        <div class="impact-desc">= Adoption d'un hectare de forêt primaire pour 1 an</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Form -->
-  <div class="donation-form reveal">
-    <h3>Votre don</h3>
-    <p class="form-sub">Déductible à 66% de vos impôts</p>
-
-    <div class="amounts">
-      <button class="amount-btn" onclick="selectAmount(this, '10')">10 €</button>
-      <button class="amount-btn active" onclick="selectAmount(this, '30')">30 €</button>
-      <button class="amount-btn" onclick="selectAmount(this, '50')">50 €</button>
-      <button class="amount-btn" onclick="selectAmount(this, '100')">100 €</button>
-    </div>
-
-    <div class="custom-amount">
-      <span>€</span>
-      <input type="number" id="customAmount" placeholder="Autre montant" min="1">
-    </div>
-
-    <div class="frequency">
-      <button class="freq-btn active" onclick="selectFreq(this)">Don unique</button>
-      <button class="freq-btn" onclick="selectFreq(this)">Don mensuel</button>
-    </div>
-
-    <div class="field">
-      <label>Prénom &amp; Nom</label>
-      <input type="text" placeholder="Marie Dupont">
-    </div>
-    <div class="field">
-      <label>Email</label>
-      <input type="email" placeholder="marie@exemple.fr">
-    </div>
-    <div class="field-row">
-      <div class="field">
-        <label>N° de carte</label>
-        <input type="text" placeholder="•••• •••• •••• ••••">
-      </div>
-      <div class="field">
-        <label>Expiration</label>
-        <input type="text" placeholder="MM/AA">
-      </div>
-    </div>
-
-    <button class="submit-btn" onclick="handleDonate()">🌿 Donner maintenant</button>
-    <div class="secure-note">🔒 Paiement sécurisé SSL — Reçu fiscal automatique</div>
-  </div>
-</section>
-
-<!-- ─── FOOTER ─── -->
+<!-- FOOTER -->
 <footer>
   <div>
-    <span class="logo">Viv<span style="font-style:italic;color:var(--gold)">ant</span></span>
-    <p>Fondation engagée pour la protection de la biodiversité mondiale. Chaque être vivant mérite un avenir.</p>
+    <a href="index.html" class="logo" style="margin-bottom:1rem">
+      <img src="assets/images/logo-removebg.png" alt="" style="width:28px">
+      Bio<span style="font-style:italic;color:var(--gold)">Friendly</span>
+    </a>
+    <p>A student university association committed to protecting global biodiversity. Every living being deserves a future.</p>
+    <div class="footer-members">
+      <span>Bilal El Ayoubi</span><span>Mohamed Djillouli</span>
+      <span>Ayoub Aouf</span><span>Lucas Benoit</span><span>Théau Geffroyd</span>
+    </div>
   </div>
   <div>
     <h4>Navigation</h4>
     <ul>
-      <li><a href="#mission">Notre mission</a></li>
-      <li><a href="#menaces">Les enjeux</a></li>
-      <li><a href="#donation">Faire un don</a></li>
+      <li><a href="mission.html">Our mission</a></li>
+      <li><a href="threats.html">The issues</a></li>
+      <li><a href="team.html">Our team</a></li>
+      <li><a href="donation.html">Donate</a></li>
     </ul>
   </div>
   <div>
-    <h4>Légal</h4>
+    <h4>Legal</h4>
     <ul>
-      <li><a href="#">Mentions légales</a></li>
-      <li><a href="#">Politique de confidentialité</a></li>
-      <li><a href="#">Rapports annuels</a></li>
+      <li><a href="#">Legal notice</a></li>
+      <li><a href="#">Privacy policy</a></li>
+      <li><a href="#">Annual reports</a></li>
     </ul>
   </div>
 </footer>
 <div class="footer-bottom">
-  <span>© 2025 Fondation Vivant — Tous droits réservés</span>
-  <span>Reconnue d'utilité publique — N° RNA W751234567</span>
+  <span>© 2025 BioFriendly University Association — All rights reserved</span>
+  <span>Group of 5 — Biodiversity &amp; Environment</span>
 </div>
 
-<script>
-// ─── CURSOR ───
-const cursor = document.getElementById('cursor');
-const cursorRing = document.getElementById('cursorRing');
-let mx = 0, my = 0, rx = 0, ry = 0;
-
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cursor.style.left = mx + 'px';
-  cursor.style.top  = my + 'px';
-});
-
-(function animRing() {
-  rx += (mx - rx) * 0.12;
-  ry += (my - ry) *.12;
-  cursorRing.style.left = rx + 'px';
-  cursorRing.style.top  = ry + 'px';
-  requestAnimationFrame(animRing);
-})();
-
-// ─── PARTICLES ───
-const canvas = document.getElementById('particles');
-const ctx = canvas.getContext('2d');
-let particles = [];
-
-function resize() {
-  canvas.width  = canvas.offsetWidth;
-  canvas.height = canvas.offsetHeight;
-}
-resize();
-window.addEventListener('resize', resize);
-
-class Particle {
-  constructor() { this.reset(); }
-  reset() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 2 + 0.5;
-    this.speedX = (Math.random() - 0.5) * 0.4;
-    this.speedY = -Math.random() * 0.5 - 0.2;
-    this.opacity = Math.random() * 0.5 + 0.1;
-    this.life = 0;
-    this.maxLife = Math.random() * 200 + 100;
-  }
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-    this.life++;
-    if (this.life > this.maxLife || this.y < 0) this.reset();
-  }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI*2);
-    ctx.fillStyle = `rgba(184,212,160,${this.opacity})`;
-    ctx.fill();
-  }
-}
-
-for (let i = 0; i < 60; i++) particles.push(new Particle());
-
-(function animParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles.forEach(p => { p.update(); p.draw(); });
-  requestAnimationFrame(animParticles);
-})();
-
-// ─── COUNTERS ───
-function animateCounter(el, target, suffix, duration) {
-  let start = 0;
-  const step = target / (duration / 16);
-  const timer = setInterval(() => {
-    start += step;
-    if (start >= target) { start = target; clearInterval(timer); }
-    el.textContent = Math.round(start).toLocaleString('fr-FR') + suffix;
-  }, 16);
-}
-
-setTimeout(() => {
-  animateCounter(document.getElementById('counter1'), 1000000, '', 2000);
-  animateCounter(document.getElementById('counter2'), 69, '%', 1500);
-  animateCounter(document.getElementById('counter3'), 1600, '', 1800);
-}, 800);
-
-// ─── SCROLL REVEAL ───
-const revealEls = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-}, { threshold: 0.15 });
-revealEls.forEach(el => observer.observe(el));
-
-// ─── FORM ───
-function selectAmount(btn, val) {
-  document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('customAmount').value = '';
-}
-
-function selectFreq(btn) {
-  document.querySelectorAll('.freq-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-}
-
-function handleDonate() {
-  document.getElementById('successOverlay').classList.add('show');
-}
-
-// ─── LEAVES ───
-const leavesBg = document.getElementById('leavesBg');
-const leafSVGs = [
-  `<svg viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg"><path d="M30 5 C10 20 5 45 30 75 C55 45 50 20 30 5Z" fill="white"/><line x1="30" y1="5" x2="30" y2="75" stroke="rgba(0,0,0,0.1)" stroke-width="0.5"/></svg>`,
-  `<svg viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg"><path d="M5 25 C20 5 60 5 75 25 C60 45 20 45 5 25Z" fill="white"/></svg>`,
-  `<svg viewBox="0 0 50 70" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C5 15 5 55 25 65 C45 55 45 15 25 5Z" fill="white"/></svg>`,
-];
-
-for (let i = 0; i < 10; i++) {
-  const div = document.createElement('div');
-  div.className = 'leaf';
-  const s = 30 + Math.random() * 60;
-  div.style.cssText = `
-    left: ${Math.random() * 100}%;
-    width: ${s}px; height: ${s}px;
-    animation-duration: ${10 + Math.random() * 15}s;
-    animation-delay: -${Math.random() * 20}s;
-  `;
-  div.innerHTML = leafSVGs[Math.floor(Math.random() * leafSVGs.length)];
-  leavesBg.appendChild(div);
-}
-</script>
+<script src="assets/javascript/shared.js"></script>
 </body>
 </html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team — BioFriendly</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .team-full-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 2rem; margin-top: 3.5rem;
+  }
+  .team-full-card {
+    background: white;
+    border: 1px solid rgba(74,124,142,.15);
+    border-radius: 4px; padding: 3rem 2.5rem;
+    transition: transform .3s, box-shadow .3s;
+    position: relative; overflow: hidden;
+  }
+  .team-full-card::before {
+    content:''; position:absolute; top:0;left:0;right:0; height:4px;
+    background: linear-gradient(90deg, var(--fern), var(--gold));
+    transform: scaleX(0); transform-origin:left; transition:transform .4s;
+  }
+  .team-full-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(45,74,45,.12); }
+  .team-full-card:hover::before { transform:scaleX(1); }
+  .full-avatar {
+    width: 80px; height: 80px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--sage), var(--water));
+    color: white; font-family:'Playfair Display',serif;
+    font-size: 1.6rem; display:flex;align-items:center;justify-content:center;
+    margin-bottom: 1.5rem;
+  }
+  .team-full-card h3 { font-family:'Playfair Display',serif; font-size:1.3rem; color:var(--moss); margin-bottom:.3rem; }
+  .full-role { font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--water); margin-bottom:1.2rem; display:block; }
+  .team-full-card p { font-size:.9rem; line-height:1.7; color:var(--soil); font-weight:300; }
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="index.html" class="logo">
+    <img src="assets/images/logo-removebg.png" alt="BioFriendly icon">
+    Bio<span>Friendly</span>
+  </a>
+  <ul>
+    <li><a href="mission.html">Mission</a></li>
+    <li><a href="threats.html">Issues</a></li>
+    <li><a href="team.html" class="active">Team</a></li>
+    <li><a href="donation.html" class="nav-donate">Donate</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <canvas id="particles"></canvas>
+  <div class="leaves-bg" id="leavesBg"></div>
+  <div class="page-hero-inner">
+    <p class="eyebrow">The people behind it</p>
+    <h1>Five students,<br><em>one mission</em></h1>
+    <p>BioFriendly was born from a shared conviction: that university students have both the knowledge and the responsibility to fight for biodiversity.</p>
+  </div>
+</div>
+
+<!-- TEAM MEMBERS -->
+<div class="section-wrap light">
+  <p class="section-tag reveal">Who we are</p>
+  <h2 class="reveal reveal-delay-1">Our Team</h2>
+  <div class="team-full-grid">
+
+    <div class="team-full-card reveal reveal-delay-1">
+      <div class="full-avatar">BE</div>
+      <h3>Bilal El Ayoubi</h3>
+      <span class="full-role">Co-founder &amp; President</span>
+      <p>Leads the association's strategic direction and partnerships. Biology student with a focus on tropical ecosystems and conservation policy.</p>
+    </div>
+
+    <div class="team-full-card reveal reveal-delay-2">
+      <div class="full-avatar">MD</div>
+      <h3>Mohamed Djillouli</h3>
+      <span class="full-role">Co-founder &amp; Vice-President</span>
+      <p>Oversees field project coordination and NGO relations. Passionate about marine biology and the intersection of science and activism.</p>
+    </div>
+
+    <div class="team-full-card reveal reveal-delay-3">
+      <div class="full-avatar">AA</div>
+      <h3>Ayoub Aouf</h3>
+      <span class="full-role">Scientific Coordinator</span>
+      <p>Curates our scientific content and ensures all communications are grounded in rigorous research. Ecology and environmental science student.</p>
+    </div>
+
+    <div class="team-full-card reveal reveal-delay-2">
+      <div class="full-avatar">LB</div>
+      <h3>Lucas Benoit</h3>
+      <span class="full-role">Communications Officer</span>
+      <p>Builds our voice across digital channels and organises awareness events. Believes that storytelling is one of the most powerful tools for conservation.</p>
+    </div>
+
+    <div class="team-full-card reveal reveal-delay-3">
+      <div class="full-avatar">TG</div>
+      <h3>Théau Geffroyd</h3>
+      <span class="full-role">Fundraising &amp; Partnerships</span>
+      <p>Develops donor relationships and corporate partnerships to fund our field projects. Combines environmental science with business strategy.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- JOIN US -->
+<div class="section-wrap dark" style="text-align:center">
+  <p class="section-tag light-tag reveal" style="display:flex;justify-content:center">Join BioFriendly</p>
+  <h2 class="on-dark reveal reveal-delay-1" style="margin:0 auto 1.5rem">Want to be part of the team?</h2>
+  <p class="body-text on-dark reveal reveal-delay-2" style="text-align:center;margin:0 auto 2.5rem">We are always looking for motivated students who want to contribute — whether through science, communication, design, or fundraising.</p>
+  <a href="mailto:contact@biofriendly.org" class="btn-primary reveal reveal-delay-3">Get in touch</a>
+</div>
+
+<footer>
+  <div>
+    <a href="index.html" class="logo" style="margin-bottom:1rem">
+      <img src="assets/images/logo-removebg.png" alt="BioFriendly icon" style="width:28px">
+      Bio<span style="font-style:italic;color:var(--gold)">Friendly</span>
+    </a>
+    <p>A student university association committed to protecting global biodiversity.</p>
+    <div class="footer-members">
+      <span>Bilal El Ayoubi</span><span>Mohamed Djillouli</span>
+      <span>Ayoub Aouf</span><span>Lucas Benoit</span><span>Théau Geffroyd</span>
+    </div>
+  </div>
+  <div>
+    <h4>Navigation</h4>
+    <ul>
+      <li><a href="mission.html">Our mission</a></li>
+      <li><a href="threats.html">The issues</a></li>
+      <li><a href="team.html">Our team</a></li>
+      <li><a href="donation.html">Donate</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Legal</h4>
+    <ul>
+      <li><a href="#">Legal notice</a></li>
+      <li><a href="#">Privacy policy</a></li>
+      <li><a href="#">Annual reports</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2025 BioFriendly University Association — All rights reserved</span>
+  <span>Group of 5 — Biodiversity &amp; Environment</span>
+</div>
+
+<script src="assets/javascript/shared.js"></script>
+</body>
+</html>

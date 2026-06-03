@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate — BioFriendly</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="success-overlay" id="successOverlay">
+  <div class="big-icon">🌿</div>
+  <h2>Thank you for your support!</h2>
+  <p>Your donation helps protect life on Earth.</p>
+  <p style="opacity:.5;font-size:.9rem">A tax receipt will be sent to your email.</p>
+  <button onclick="document.getElementById('successOverlay').classList.remove('show')">Back to site</button>
+</div>
+
+<nav>
+  <a href="index.html" class="logo">
+    <img src="YOUR_ICON_PATH_HERE" alt="BioFriendly icon">
+    Bio<span>Friendly</span>
+  </a>
+  <ul>
+    <li><a href="mission.html">Mission</a></li>
+    <li><a href="threats.html">Issues</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="donation.html" class="nav-donate active">Donate</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <canvas id="particles"></canvas>
+  <div class="leaves-bg" id="leavesBg"></div>
+  <div class="page-hero-inner">
+    <p class="eyebrow">Take action</p>
+    <h1>Every euro<br><em>counts.</em></h1>
+    <p>Your generosity is turned into direct field action. 100% of donations go to conservation projects.</p>
+  </div>
+</div>
+
+<!-- DONATION SECTION -->
+<div class="section-wrap light">
+  <div class="donation-layout">
+    <div class="donation-intro">
+      <p class="section-tag reveal">Your impact</p>
+      <h2 class="reveal reveal-delay-1">What your donation does</h2>
+      <p class="body-text reveal reveal-delay-2">BioFriendly works with local NGOs and field scientists to ensure every euro creates measurable, lasting impact.</p>
+      <div class="impact-list reveal reveal-delay-3">
+        <div class="impact-item">
+          <div class="impact-amount">€10</div>
+          <div class="impact-desc">= 5 trees planted in a critical deforestation zone</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-amount">€30</div>
+          <div class="impact-desc">= Protection of 1 m² of coral reef for 1 year</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-amount">€50</div>
+          <div class="impact-desc">= Funding one hour of fieldwork for a researcher</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-amount">€100</div>
+          <div class="impact-desc">= Adoption of one hectare of primary forest for 1 year</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="donation-form reveal">
+      <h3>Your donation</h3>
+      <p class="form-sub">66% tax deductible</p>
+
+      <div class="amounts">
+        <button class="amount-btn" onclick="selectAmount(this,'10')">€10</button>
+        <button class="amount-btn active" onclick="selectAmount(this,'30')">€30</button>
+        <button class="amount-btn" onclick="selectAmount(this,'50')">€50</button>
+        <button class="amount-btn" onclick="selectAmount(this,'100')">€100</button>
+      </div>
+
+      <div class="custom-amount">
+        <span>€</span>
+        <input type="number" id="customAmount" placeholder="Other amount" min="1">
+      </div>
+
+      <div class="frequency">
+        <button class="freq-btn active" onclick="selectFreq(this)">One-time gift</button>
+        <button class="freq-btn" onclick="selectFreq(this)">Monthly gift</button>
+      </div>
+
+      <div class="field">
+        <label>First &amp; Last name</label>
+        <input type="text" placeholder="Jane Smith">
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <input type="email" placeholder="jane@example.com">
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Card number</label>
+          <input type="text" placeholder="•••• •••• •••• ••••">
+        </div>
+        <div class="field">
+          <label>Expiry</label>
+          <input type="text" placeholder="MM/YY">
+        </div>
+      </div>
+
+      <button class="submit-btn" onclick="handleDonate()">🌿 Donate now</button>
+      <div class="secure-note">🔒 SSL Secure payment — Automatic tax receipt</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRESS -->
+<div class="progress-section">
+  <h2 class="reveal">Our 2025 goal: €150,000</h2>
+  <div class="progress-bar-wrap"><div class="progress-fill"></div></div>
+  <div class="progress-labels">
+    <span><strong style="color:var(--water)">€100,500</strong> raised</span>
+    <span>67%</span>
+    <span>Goal: €150,000</span>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <a href="index.html" class="logo" style="margin-bottom:1rem">
+      <img src="YOUR_ICON_PATH_HERE" alt="" style="width:28px">
+      Bio<span style="font-style:italic;color:var(--gold)">Friendly</span>
+    </a>
+    <p>A student university association committed to protecting global biodiversity.</p>
+    <div class="footer-members">
+      <span>Bilal El Ayoubi</span><span>Mohamed Djillouli</span>
+      <span>Ayoub Aouf</span><span>Lucas Benoit</span><span>Théau Geffroyd</span>
+    </div>
+  </div>
+  <div>
+    <h4>Navigation</h4>
+    <ul>
+      <li><a href="mission.html">Our mission</a></li>
+      <li><a href="threats.html">The issues</a></li>
+      <li><a href="team.html">Our team</a></li>
+      <li><a href="donation.html">Donate</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Legal</h4>
+    <ul>
+      <li><a href="#">Legal notice</a></li>
+      <li><a href="#">Privacy policy</a></li>
+      <li><a href="#">Annual reports</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2025 BioFriendly University Association — All rights reserved</span>
+  <span>Group of 5 — Biodiversity &amp; Environment</span>
+</div>
+
+<script>
+function selectAmount(btn, val) {
+  document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('customAmount').value = '';
+}
+function selectFreq(btn) {
+  document.querySelectorAll('.freq-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+function handleDonate() {
+  document.getElementById('successOverlay').classList.add('show');
+}
+</script>
+<script src="shared.js"></script>
+</body>
+</html>
